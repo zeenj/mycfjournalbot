@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+builderSettings = { nixpacks = { config = { phases = { install = { nixPkgs = ["python310"] }, setup = { cmds = ["pip install -r requirements.txt"] } } } } }
+
+[deploy]
+startCommand = "python main.py"
+healthcheckPath = "/"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

@@ -1,4 +1,27 @@
+# ADD THESE IMPORTS FIRST
 import os
+import sys
+
+# Force Python version check
+print(f"Python version: {sys.version}")
+print(f"Current directory: {os.getcwd()}")
+print(f"Files in directory: {os.listdir('.')}")
+
+# Rest of your imports...
+import telebot
+from telebot import types
+import json
+import requests
+import pandas as pd
+import numpy as np
+from datetime import datetime
+from flask import Flask
+from threading import Thread
+import logging
+
+# Rest of your code...
+
+
 import telebot
 from telebot import types
 import json
